@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Register | Login | Home</title>
+    <link rel="stylesheet" href="./styles/App.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="forms-container">
+        <div class="signin-signup">
+          <form action="#" id="signIn" method="get" class="sign-in-form">
+            <h2 class="title">Sign in</h2>
+              <span class="invalid"></span>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="email" placeholder="E-mail" id="emailSignin"/>
+              <span class="error"></span>
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" placeholder="Password" id="passwordSignin" />
+              <span class="error"></span>
+            </div>
+            <input type="submit" value="Login" class="btn solid" />
+          </form>
+          <form action="#" id="register" method="post" class="sign-up-form">
+            <h2 class="title">Sign up</h2>
+            <span class="success"></span>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input
+                type="text"
+                placeholder="Username"
+                name="fullNameReg"
+                id="fullNameReg"
+              />
+              <span class="error"></span>
+            </div>
+            <div class="input-field">
+              <i class="fas fa-envelope"></i>
+              <input
+                type="email"
+                placeholder="Email"
+                name="emailReg"
+                id="emailReg"
+              />
+              <span class="error"></span>
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input
+                type="password"
+                placeholder="Password"
+                name="passwordReg"
+                id="passwordReg"
+              />
+              <span class="error"></span>
+            </div>
+            <input type="submit" class="btn" value="Sign up" />
+          </form>
+        </div>
+      </div>
+
+      <div class="panels-container">
+        <div class="panel left-panel">
+          <div class="content">
+            <h3>New here ?</h3>
+            <p>
+              To start your amazing journy with us Sign Up!
+            </p>
+            <button class="btn transparent" id="sign-up-btn">Sign up</button>
+          </div>
+        </div>
+        <div class="panel right-panel">
+          <div class="content">
+            <h3>Welcome Back!</h3>
+            <p>
+              To stay connected with us Login here!
+            </p>
+            <button class="btn transparent" id="sign-in-btn">Sign in</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const sign_in_btn = document.querySelector('#sign-in-btn');
+      const sign_up_btn = document.querySelector('#sign-up-btn');
+      const container = document.querySelector('.container');
+
+sign_up_btn.addEventListener('click', () => {
+  container.classList.add('sign-up-mode');
+});
+
+sign_in_btn.addEventListener('click', () => {
+  container.classList.remove('sign-up-mode');
+});
+    </script>
+  </body>
+  <!-- Our script -->
+  <script type="module" src="./script/App.js"></script>
+</html>
